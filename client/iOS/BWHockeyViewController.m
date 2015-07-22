@@ -391,7 +391,7 @@
   self.tableView.tableHeaderView = appStoreHeader_;
   
   if (self.modal) {
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                            target:self
                                                                                            action:@selector(onAction:)] autorelease];
   }
