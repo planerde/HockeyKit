@@ -32,9 +32,9 @@
 #define kLightGrayColor BW_RGBCOLOR(200, 202, 204)
 #define kDarkGrayColor  BW_RGBCOLOR(140, 141, 142)
 
-#define kImageHeight 57
+#define kImageHeight 60
 #define kReflectionHeight 20
-#define kImageBorderRadius 10
+#define kImageBorderRadius 15
 #define kImageMargin 8
 #define kTextRow kImageMargin*2 + kImageHeight
 
@@ -100,14 +100,14 @@
   [reflectedImage_ drawAtPoint:CGPointMake(kImageMargin, kImageMargin+kImageHeight)];
   
   // shadows are a beast
-  NSInteger shadowOffset = 2;
-  BW_IF_IOS4_OR_GREATER(if([[UIScreen mainScreen] scale] == 2) shadowOffset = 1;)
-  BW_IF_IOS5_OR_GREATER(shadowOffset = 1;) // iOS5 changes this - again!
-  
-  BW_IF_3_2_OR_GREATER(CGContextSetShadowWithColor(context, CGSizeMake(shadowOffset, shadowOffset), 0, myColor);)
-  BW_IF_PRE_3_2(shadowOffset=1;CGContextSetShadowWithColor(context, CGSizeMake(shadowOffset, -shadowOffset), 0, myColor);)
-  
-  
+//  NSInteger shadowOffset = 2;
+//  BW_IF_IOS4_OR_GREATER(if([[UIScreen mainScreen] scale] == 2) shadowOffset = 1;)
+//  BW_IF_IOS5_OR_GREATER(shadowOffset = 1;) // iOS5 changes this - again!
+//  
+//  BW_IF_3_2_OR_GREATER(CGContextSetShadowWithColor(context, CGSizeMake(shadowOffset, shadowOffset), 0, myColor);)
+//  BW_IF_PRE_3_2(shadowOffset=1;CGContextSetShadowWithColor(context, CGSizeMake(shadowOffset, -shadowOffset), 0, myColor);)
+//  
+//  
   [mainTextColor set];
   [headerLabel_ drawInRect:CGRectMake(kTextRow, kImageMargin, globalWidth-kTextRow, 20) withFont:mainFont lineBreakMode:UILineBreakModeTailTruncation];
   

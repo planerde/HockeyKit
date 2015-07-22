@@ -376,7 +376,7 @@
     }
   }
   
-  BOOL addGloss = YES;
+  BOOL addGloss = NO;
   NSNumber *prerendered = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIPrerenderedIcon"];
   if (prerendered) {
     addGloss = ![prerendered boolValue];
