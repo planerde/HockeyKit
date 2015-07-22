@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
                    'client/iOS/Helper'
 
   s.resource     = 'client/iOS/Hockey.bundle'
-  s.clean_paths  = 'client/Android', 'demo', 'server', 'client/iOS/HockeyLib', 'client/iOS/JSON'
+  # s.clean_paths  = 'client/Android', 'demo', 'server', 'client/iOS/HockeyLib', 'client/iOS/JSON'
+  s.requires_arc = false
   s.frameworks   = 'QuartzCore', 'SystemConfiguration'
 end
